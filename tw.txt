@@ -1,0 +1,33 @@
+template: negru cu portocaliu +scris alb
+
+
+pagina de start:(felix)
+-header:pe mijloc numele proiectului
+-main:2 butoane cu login si register
+
+
+
+login as admin:(cristi)
+-header
+-bara cu butoane:
+    -buton ,toti useri cu inf + buton de cautare + buton select
+        -inf: toate jocurile pe care le a accesat,pentru fiecare joc numarul de intrebari raspunse corect si gresit + nivelul de dificultate la care a ajuns
+    -buton pentru schimbare anumite date pentru un user,formular cu numele user-ului
+    -scrollbar -alegem tipul de joc si ne afiseaza primi 10 useri pentru categoria respectiva
+    -buton cu mesaje primite
+
+
+
+
+login as user:(felix si andrei)
+-header
+-bara cu butoane:
+    -learning
+        -afiseaza selectul cu toate categoriile de joc ,cand selecteaza categoria afiseaza toate jocurile din categoria respectiva
+    -testing
+        -select cu categoria de joc + select cu nivel de dificultate +submit
+        -fiecare joc e ca un buton ,fiecare joc are 3 intrebari pentru fiecare nivel de dificultate +mesage box cu raspuns corec/gresit
+    -info_my_account
+        -
+    -clasament top 10 jucatori pe categorii
+        -
