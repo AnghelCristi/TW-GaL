@@ -1,0 +1,323 @@
+body{
+    background-color: #1B1B1B;
+}
+
+header{
+    background-color: #1b1b1b;
+    width: 100%;
+    height:60px;
+
+}
+
+main{
+    background-color: #FFA500;
+    width: 100%;
+    height: 570px;
+    display: inline-flex;
+}
+
+footer{
+    background-color: #1B1B1B;
+    width: 100%;
+    height:68px;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.content_stanga{
+    background-color: black;
+    height: 100%;
+    width: 200px;
+    text-align: center;
+}
+
+.paragraf{
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    font-family: 'Verdana';
+}
+
+.buton{
+    width: 150px;
+    background-color: #1B1B1B;
+    height:50px;
+    margin-bottom: 10px;
+    color: white;
+    border-color: white;
+    border-radius: 10px;
+    font-family: 'Verdana';
+    border-color: #FFA500;
+    transition: 0.5s;
+    font-size: 15px;
+}
+
+footer button{
+    margin-top: 15px;
+}
+
+.buton:hover{
+    width: 180px;
+    height:65px;
+    transition: 0.5s;
+    font-size: 20px;
+    background-color: #FFA500;
+    color:#1B1B1B;
+}
+
+p{
+    color: white;
+    font-family: 'Verdana';
+    font-size: 25px;
+}
+
+.buton_selected{
+
+    width: 180px;
+    background-color: #FFA500;
+    height:50px;
+    margin-bottom: 10px;
+    color: #1B1B1B;    
+    border-radius: 10px;
+    font-family: 'Verdana';
+    border-color: #FFA500;
+    font-size: 15px;
+
+}
+
+
+.form{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+label{
+    font-size: 20px;
+    color:#1B1B1B;
+    font-family: 'Verdana';
+}
+
+input[type=text]{
+    height: 20px;
+    width: 150px;
+    border-radius: 10px;
+    color:#1B1B1B;
+    font-size: larger;
+    font-family: 'Verdana';
+    padding-left:15px;
+    border: none;
+}
+
+input[type=button]{
+    width: 80px;
+    background-color: #1B1B1B;
+    height:30px;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 10px;
+    border:none;
+    font-family: 'Verdana';
+    transition: 0.5s;
+    font-size: 15px;
+}
+
+input[type=button]:hover{
+    transition: 0.5s;
+    background-color: white;
+    color:#FFA500;
+}
+
+
+.content_dreapta{
+    background-color: #FFA500;
+    height: 570px;
+    width: 90%;
+    overflow: auto;
+}
+
+.user_name{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user_name div{
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #1B1B1B;
+    color: white;
+    text-align: center;
+    width: 300px;
+    height: 55px;
+    padding-bottom: 30px;
+    margin-left: 30px;
+    margin-top:30px;
+}
+
+h1{
+    color:#1B1B1B;
+    font-size: 30px;
+    font-family: 'Verdana';
+    margin-left: 15px;
+}
+
+.info_game{
+    margin-left: 25px;
+    border-color: #1B1B1B;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    height:280px;
+    width:500px; 
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+
+select{
+    height: 25px;
+    width: 150px;
+    border-radius: 10px;
+    color:#1B1B1B;
+    font-size: larger;
+    font-family: 'Verdana';
+    padding-left:15px;
+    border: none;
+}
+
+input[type=password]{
+    height: 20px;
+    width: 150px;
+    border-radius: 10px;
+    color:#1B1B1B;
+    font-size: larger;
+    font-family: 'Verdana';
+    padding-left:15px;
+    border: none;
+}
+
+.info_mesaj{
+    margin-left: 25px;
+    border-color: #1B1B1B;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    height:200px;
+    width:85%; 
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.content_dreapta1{
+    margin-left: 500px;
+    margin-top:50px;
+}
+
+img{
+    border-radius: 220px;
+}
+
+.Welcome{
+    margin-left: 98px;
+}
+
+
+@media screen and (max-width: 360px){
+
+    header{
+        width: 50%;
+        height: 30px;
+        padding-bottom: 30px;
+    }
+
+    footer{
+        width: 90%;
+    }
+
+    .paragraf{
+        font-size:25px;
+        margin-left: 150px;
+    }
+
+    .buton{
+        width: 50%;
+        font-size: 40%;
+    }
+
+    .buton_selected{
+        width: 100px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    p{
+        font-size: 80%;
+        margin-top:30px;
+    }
+
+    .content_stanga{
+        width: 100px;
+    }
+
+    .content_dreapta1{
+        margin-top: 120px;
+        margin-left: 55px;
+    }
+
+    .Welcome{
+        margin-left:15px;
+    }
+
+    img{
+        height:30%;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    .mesaje{
+        margin-left: -20px;
+    }
+
+    .info_mesaj{
+        height: 100px;
+        width:80%;        
+    }
+
+    div p{
+        margin-top: 10px;
+    }
+
+    input[type=text]{
+        margin-bottom: 10px;
+        margin-top: 10px;   
+    }
+
+    .user_name div{
+        height: 15px;
+        width: 200px;
+        margin-left: 10px;
+    }
+
+    .info_user h1{
+        font-size: 18px;
+
+    }
+
+    .info_game{
+        height: 140px;
+        margin-left: 5px;
+        width: 90%;
+    }
+
+    select{
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 70%;
+    }
+
+}
