@@ -1,5 +1,5 @@
 body {
-    background-color: #f14523ce;
+    background-color: #FFA500;
     box-sizing: border-box;
     height: 95vh;
     /* display: flex;
@@ -14,7 +14,8 @@ h3 {
     font-size: 2rem;
     margin-top: 0px;
     margin-bottom: 0px;
-    background-color: #f0efef;
+    background-color: #333333;
+    color: #f0efef;
 }
 
 main {
@@ -45,7 +46,7 @@ form {
 }
 
 .form-button {
-    background-color: #f14523f5;
+    background-color: #FFA500;
     color: rgb(255, 255, 255);
     text-align: center;
     height: 15%;
