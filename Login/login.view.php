@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="start_page.css">
+    <link rel="stylesheet" href="login.css">
     <title>GAL - Login</title>
 </head>
 
@@ -14,7 +14,7 @@
         <h3>GaL </h3>
     </div>
     <main>
-        <form action="" method="POST">
+        <form action="login.controller.php" method="POST">
             <label for="email"></label>
             <input type="email" class="form-field" name="email" placeholder="Email" required>
 
@@ -24,7 +24,7 @@
             <input type="submit" class="form-button" name="submit" value="Login">
         </form>
 
-        <form action="" method="POST">
+        <form action="login.controller.php" method="POST">
             <label for="email"></label>
             <input type="email" class="form-field" name="email" placeholder="Email" required>
 

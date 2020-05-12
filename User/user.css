@@ -31,6 +31,14 @@ nav {
     flex: 1;
 }
 
+main {
+    display: flex;
+}
+
+.form {
+    margin: 5%;
+}
+
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -72,6 +80,13 @@ li label, .nav-button {
     background-color: #FFA500;
 }
 
+.form {
+    background-color: #FFA500;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+}
+
 /* footer {
     background-color: #1b1b1b;
     width: 100%;
@@ -94,6 +109,9 @@ li label, .nav-button {
         display: block;
         align-items: center;
         margin: 0px;
+    }
+    main {
+        flex-direction: column;
     }
     .nav-button {
         font-size: 1rem;

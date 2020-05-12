@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="user.css">
+    <title>GaL - My account</title>
+</head>
+
+<body>
+
+    <header>
+        <h3 class="game-name">GaL</h3>
+    </header>
+
+    <main>
+        <nav>
+            <ul>
+                <li>
+                    <button class="nav-button" onclick=window.location.href="learn.html">
+                        Learn about a game
+                    </button>
+                </li>
+
+                <li>
+                    <button class="nav-button" onclick=window.location.href="test.html">
+                        Test your knowledge
+                    </button>
+                </li>
+
+                <li>
+                    <button class="nav-button button-selected" onclick=window.location.href="my-account.html">
+                        My account
+                    </button>
+                </li>
+
+                <li>
+                    <button class="nav-button" onclick=window.location.href="leaderboard.html">
+                        Leaderboard
+                    </button>
+                </li>
+
+                <li>
+                    <button class="nav-button" onclick=window.location.href="../Login/login.view.php">
+                        Logout
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="form">
+            <form>
+                <label for="password">New Password: </label><br><br>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="button" value="Modify" onclick=window.location.href='my-account.html'>
+            </form>
+        </div>
+
+    </main>
+</body>
+
+</html>
