@@ -1,0 +1,14 @@
+{
+    "id": {
+        "1": {
+            "Monopoly": {
+                "descriere": "descriere_monopoly"
+            }
+        },
+        "2": {
+            "Scrabble": {
+                "descriere": "descriere_scrabble"
+            }
+        }
+    }
+}
