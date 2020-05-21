@@ -19,11 +19,12 @@
 
         <div class="content_stanga">
 
-            <button class="buton" onclick=window.location.href='pagina_start_admin.html'>Home</button>
+            <button class="buton" onclick="window.location.href='../Admin/pagina_start_admin.html'">Home</button>
             <button class="buton_selected">Info Users</button>
-            <button class="buton" onclick=window.location.href='pagina_top_users_categorii.php'>Top 10 Users</button>
-            <button class="buton" onclick=window.location.href='pagina_change_pass.php'>Change password</button>
-            <button class="buton" onclick=window.location.href='pagina_messages.html'>Messages</button> 
+            <button class="buton" onclick="window.location.href='../Admin/pagina_top_users_categorii.php'">Top 10 Users</button>
+            <button class="buton" onclick="window.location.href='../Admin/pagina_change_pass.php'">Change password</button>
+            <button class="buton" onclick="window.location.href='../Admin/pagina_messages.html'">Messages</button>
+            <button class="buton" onclick="window.location.href='../Login/login.view.php'">Logout</button>
 
         </div>
 
@@ -101,9 +102,10 @@
     <footer>
     
     <p>Developers:</p>
-    <button class="buton" onclick=window.location.href='https://www.facebook.com/cristi.anghel.10'>Anghel-Marius Cristi</button>
-    <button class="buton" onclick=window.location.href='https://www.facebook.com/galatanu.mirceaandrei'>Galatanu Mircea Andrei</button>
-    <button class="buton" onclick=window.location.href='https://www.facebook.com/felix.hugeanu'>Felix Hugeanu</button>
+    
+    <button class="buton" onclick="window.location.href='https://www.facebook.com/cristi.anghel.10'">Anghel-Marius Cristi</button>
+    <button class="buton" onclick="window.location.href='https://www.facebook.com/galatanu.mirceaandrei'">Galatanu Mircea Andrei</button>
+    <button class="buton" onclick="window.location.href='https://www.facebook.com/felix.hugeanu'">Felix Hugeanu</button>
 
     </footer>
     
