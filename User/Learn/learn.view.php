@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="../user.css">
     <title>GaL - Learn</title>
 </head>
 
@@ -15,39 +15,50 @@
         <h3 class="game-name">GaL</h3>
     </header>
 
+    <div class="content">
         <nav>
             <ul>
                 <li>
-                    <button class="nav-button button-selected" onclick=window.location.href="learn.html">
+                    <button class="nav-button button-selected" onclick=window.location.href="learn.view.php">
                         Learn about a game
                     </button>
                 </li>
 
                 <li>
-                    <button class="nav-button" onclick=window.location.href="test.html">
+                    <button class="nav-button" onclick=window.location.href="../Test/test.view.php">
                         Test your knowledge
                     </button>
                 </li>
 
                 <li>
-                    <button class="nav-button" onclick=window.location.href="my-account.html">
+                    <button class="nav-button" onclick=window.location.href="../MyAccount/my-account.view.php">
                         My account
                     </button>
                 </li>
 
                 <li>
-                    <button class="nav-button" onclick=window.location.href="leaderboard.html">
+                    <button class="nav-button" onclick=window.location.href="../Leaderboard/leaderboard.view.php">
                         Leaderboard
                     </button>
                 </li>
 
                 <li>
-                    <button class="nav-button" onclick=window.location.href="../Login/login.view.php">
+                    <button class="nav-button" onclick=window.location.href="../../Login/login.view.php">
                         Logout
                     </button>
                 </li>
             </ul>
         </nav>
+
+        <main>
+            <button class="game-category" onclick=window.location.href="CardGames/card-games.view.php">Card games</button>
+            <button class="game-category" onclick=window.location.href="arcade-games.view.php">Arcade games</button>
+            <button class="game-category" onclick=window.location.href="adventure-games.view.php">Adventure games</button>
+            <button class="game-category" onclick=window.location.href="strategy-games.view.php">Strategy games</button>
+        </main>
+    </div>
+
+
 
     <!-- <footer>
         <p class="developers">Developers:</p>

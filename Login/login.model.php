@@ -17,6 +17,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+function transmitUser($data)
+{
+    $cookie_name = "email";
+    $cookie_value = $data->email;
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+}
+
 function register($data)
 {
     global $conn;
@@ -38,13 +45,29 @@ function register($data)
         if ($admin) {
             header("Location: ../Admin/pagina_start_admin.html");
         } else {
-            header("Location: ../User/learn.html");
+            header("Location: ../User/Learn/learn.view.php");
         }
     } else {
         http_response_code(400);
         echo '<script>
             alert("Not registered.");
         </script>';
+    }
+
+    if ($admin == false) {
+        $stmt_points = $conn->prepare('INSERT INTO learn (email, game, points, difficulty) SET email = $email');
+        // $stmt_points->bind_param('s', $email);
+        if ($stmt_points->execute()) {
+            http_response_code(200);
+            echo '<script>
+                    alert("Successfully added in points.");
+                </script>';
+        } else {
+            http_response_code(400);
+            echo '<script>
+                    alert("Not added in points.");
+                    </script>';
+        }
     }
 }
 
@@ -95,7 +118,7 @@ function login($data)
             if ($admin) {
                 header("Location: ../Admin/pagina_start_admin.html");
             } else {
-                header("Location: ../User/learn.html");
+                header("Location: ../User/Learn/learn.view.php");
             }
         } else {
             http_response_code(401);

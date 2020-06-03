@@ -1,7 +1,7 @@
 <?php
 
 // session_start();
-include_once 'login.model.php';
+include_once 'learn.model.php';
 
 if (isset($_POST['submit'])) {
 
@@ -15,7 +15,6 @@ if (isset($_POST['submit'])) {
 
     header('Location: login.view.php');
 
-    transmitUser($data);
     switch ($_POST['submit']) {
         case 'Login':
             login($data);
