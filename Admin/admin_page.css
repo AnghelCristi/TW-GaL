@@ -108,7 +108,7 @@ input[type=text]{
     border: none;
 }
 
-input[type=button]{
+input[type=button],input[type=submit]{
     width: 80px;
     background-color: #1B1B1B;
     height:30px;
@@ -122,6 +122,12 @@ input[type=button]{
 }
 
 input[type=button]:hover{
+    transition: 0.5s;
+    background-color: white;
+    color:#FFA500;
+}
+
+input[type=submit]:hover{
     transition: 0.5s;
     background-color: white;
     color:#FFA500;
