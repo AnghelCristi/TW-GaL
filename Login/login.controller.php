@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
 
     header('Location: login.view.php');
 
-    transmitUser($data);
+    setUserCookie($data);
     switch ($_POST['submit']) {
         case 'Login':
             login($data);

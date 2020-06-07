@@ -17,7 +17,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-function transmitUser($data)
+function setUserCookie($data)
 {
     $cookie_name = "email";
     $cookie_value = $data->email;
@@ -55,8 +55,7 @@ function register($data)
     }
 
     if ($admin == false) {
-        $stmt_points = $conn->prepare('INSERT INTO learn (email, game, points, difficulty) SET email = $email');
-        // $stmt_points->bind_param('s', $email);
+       
         if ($stmt_points->execute()) {
             http_response_code(200);
             echo '<script>

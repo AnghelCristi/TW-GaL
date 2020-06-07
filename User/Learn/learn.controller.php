@@ -3,25 +3,11 @@
 // session_start();
 include_once 'learn.model.php';
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['mark-as-read'])) {
 
-    $query_string = file_get_contents("php://input");
-    $keywords = preg_split("/[\s,=,&]+/", $query_string);
-    $arr = [];
-    for ($i = 0; $i < sizeof($keywords); $i++) {
-        $arr[$keywords[$i]] = $keywords[++$i];
-    }
-    $data = (object)$arr;
+    // header('Location:' .  $_COOKIE["game_name"] . '.view.php');
 
-    header('Location: login.view.php');
+    addPoints($_COOKIE["email"], $_COOKIE["game_name"], $_POST['difficulty']);
 
-    switch ($_POST['submit']) {
-        case 'Login':
-            login($data);
-            break;
-
-        case 'Register':
-            register($data);
-            break;
-    }
+    echo'OK';
 }

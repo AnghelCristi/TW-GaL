@@ -50,9 +50,39 @@
             </ul>
         </nav>
 
+
+        <?php
+        $cookie_name = "game_name";
+        $cookie_value = "macao";
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+        ?>
+
         <main>
-            <button class="game-category" onclick=window.location.href="card-games.view.php">Card games</button>
-            <button class="game-category" onclick=window.location.href="arcade-games.view.php">Arcade games</button>
+
+            <form action="" method="POST">
+                <label for="difficulty">Choose a difficulty:</label>
+                <select name="difficulty" id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <input type="submit" value="Search" name="search">
+            </form>
+
+
+            <?php
+            include_once 'learn.model.php';
+            $questions = getQuestions("macao", $_POST['difficulty']);
+            foreach ($questions as $q) {
+                echo '<div class="info">
+                <form action="learn.controller.php" method="POST">
+                <button type="submit" name="mark-as-read" class="mark-as-read">
+                    <img src="../tick.jpg" alt="Mark as read">
+                </button> </form>' . $q . '</div>';
+            }
+            ?>
+
+
         </main>
     </div>
 

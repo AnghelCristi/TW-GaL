@@ -17,7 +17,7 @@ main {
     height: 90vh;
     display: flex;
     align-items: flex-start;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .game-category {
@@ -28,7 +28,7 @@ main {
     font-size: 1.3rem;
     font-weight: bold;
     text-align: center;
-    background-color:#1b1b1b;
+    background-color: #1b1b1b;
     margin: 10px;
     color: #FFA500;
     border-radius: 10px;
