@@ -53,21 +53,6 @@ function register($data)
             alert("Not registered.");
         </script>';
     }
-
-    if ($admin == false) {
-       
-        if ($stmt_points->execute()) {
-            http_response_code(200);
-            echo '<script>
-                    alert("Successfully added in points.");
-                </script>';
-        } else {
-            http_response_code(400);
-            echo '<script>
-                    alert("Not added in points.");
-                    </script>';
-        }
-    }
 }
 
 function login($data)

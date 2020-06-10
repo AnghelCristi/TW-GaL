@@ -44,7 +44,7 @@ function addPoints($email, $game, $difficulty)
     } else {
         $points = 0;
         $insert_stmt = $conn->prepare('INSERT INTO learn SET email=? , game = ? , difficulty = ?, points=?');
-        $insert_stmt->bind_param('ssss', $email, $game, $difficulty, $points);
+        $insert_stmt->bind_param('sssi', $email, $game, $difficulty, $points);
         $stmt->execute();
     }
 }

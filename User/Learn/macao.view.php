@@ -19,31 +19,31 @@
         <nav>
             <ul>
                 <li>
-                    <button class="nav-button button-selected" onclick=window.location.href="learn.view.php">
+                    <button class="nav-button button-selected" onclick="window.location.href='learn.view.php'">
                         Learn about a game
                     </button>
                 </li>
 
                 <li>
-                    <button class="nav-button" onclick=window.location.href="../Test/test.view.php">
+                    <button class="nav-button" onclick="window.location.href='../Test/test.view.php'">
                         Test your knowledge
                     </button>
                 </li>
 
                 <li>
-                    <button class="nav-button" onclick=window.location.href="../MyAccount/my-account.view.php">
+                    <button class="nav-button" onclick="window.location.href='../MyAccount/my-account.view.php'">
                         My account
                     </button>
                 </li>
 
                 <li>
-                    <button class="nav-button" onclick=window.location.href="../Leaderboard/leaderboard.view.php">
+                    <button class="nav-button" onclick="window.location.href='../Leaderboard/leaderboard.view.php'">
                         Leaderboard
                     </button>
                 </li>
 
                 <li>
-                    <button class="nav-button" onclick=window.location.href="../../Login/login.view.php">
+                    <button class="nav-button" onclick="window.location.href='../../Login/login.view.php'">
                         Logout
                     </button>
                 </li>
@@ -59,7 +59,7 @@
 
         <main>
 
-            <form action="" method="POST">
+            <form action="#" method="POST">
                 <label for="difficulty">Choose a difficulty:</label>
                 <select name="difficulty" id="difficulty">
                     <option value="easy">Easy</option>
