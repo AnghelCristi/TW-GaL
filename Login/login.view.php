@@ -15,21 +15,21 @@
     </div>
     <main>
         <form action="login.controller.php" method="POST">
-            <label for="email"></label>
-            <input type="email" class="form-field" name="email" placeholder="Email" required>
+            <label for="email_1"></label>
+            <input type="email" class="form-field" name="email" id="email_1" placeholder="Email" required>
 
-            <label for="password"></label>
+            <label for="password_1"></label>
             <input type="password" class="form-field" name="password" placeholder="Parola" required>
 
-            <input type="submit" class="form-button" name="submit" value="Login">
+            <input type="submit" class="form-button" name="submit" id="password_1" value="Login">
         </form>
 
         <form action="login.controller.php" method="POST">
-            <label for="email"></label>
-            <input type="email" class="form-field" name="email" placeholder="Email" required>
+            <label for="email_2"></label>
+            <input type="email" class="form-field" name="email" id="email_2" placeholder="Email" required>
 
-            <label for="password"></label>
-            <input type="password" class="form-field" name="password" placeholder="Parola" required>
+            <label for="password_2"></label>
+            <input type="password" class="form-field" name="password" id="password_2" placeholder="Parola" required>
 
             <input type="submit" class="form-button" name="submit" value="Register">
         </form>
