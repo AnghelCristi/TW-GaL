@@ -68,8 +68,11 @@
     </section>
     <h2 role="doc-subtitle">Architecture</h2>
     <section itemprop="articleSection">
-      <img src="Diagrama.jpg" alt="architecture"><br><br>
-      <p>Diagram: The architecture</p><br><br>
+      <img src="architecture admin.png" alt="architecture admin">
+      <p style="text-align: center;">Admin architecture</p><br><br>
+
+      <img src="architecture user.png" alt="architecture user">
+      <p style="text-align: center;">User architecture</p><br><br>
 
       <p itemprop="doc-subtitle">-user will choose the category of the game (cards etc.), then the specific game. After
         choosing the level of difficulty (easy, medium, hard), the database will retrieve the questions of the game and
@@ -84,8 +87,8 @@
       <h3 role="doc-subtitle">Data storage</h3>
       <p>We used a MySQL Database in order to persist the users, learning progress, questions and testing progress.
         Also, a table stoores the admins (email, password, and JWT for auth). </p>
+        <br>
 
-      <img src="EntityRelationshipDiagram.png" alt="EntityRelationshipDiagram"><br><br>
 
       <h3 role="doc-subtitle">Admin authentication</h3>
       <p>We use JSON Web Tokens - JWT (i.e. a unique key) to authenticate the admin. The admin will have an email (with
@@ -106,16 +109,15 @@
         asyncronously (e.g. after the page has loaded), so he does not have to wait for the top to load and view a blank
         page in the meantime.
       </p>
-      <img src="ajax.png" alt="about"><br><br>
 
 
       <section itemprop="articleSection">
-        <h2 role="doc-subtitle">Tehnologies used</h2>
+        <h2 role="doc-subtitle">Technologies used</h2>
         <p itemprop="about">
-          For Frontend: HTML5, CSS3.<br>
-          For Backend: PHP, Javascript.<br>
+          Frontend: HTML5, CSS3.<br>
+          Backend: PHP, Javascript.<br>
           APACHE server (XAMPP) which runs the PHP files.<br>
-          For data storage: MySQL server.
+          Data storage: MySQL.
 
         </p>
       </section>
