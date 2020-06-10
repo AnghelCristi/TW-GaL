@@ -7,37 +7,67 @@
     <link href="admin_page.css" rel="stylesheet" type="text/css">
     <title>GaL</title>
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+
     <script>
-        $(document).ready(function() {
-            $(".afisare_utilizatori").click(function() {
-                $.ajax({
-                    url: "all_users.php",
-                    success: function(result) {
-                        $(".user_name").html(result);
-                    }
-                });
-            });
+        function submitFormAjax() {
+            var divinfo = document.getElementById("infouser");
+            let xmlhttp = window.XMLHttpRequest ?
+                new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200)
+                    divinfo.innerHTML = xmlhttp.responseText;
+            }
+
+            let name = document.getElementById('user_name').value;
+
+            xmlhttp.open("GET", "user_info.php?user_name=" + name, true);
+            xmlhttp.send();
+        }
 
 
-            $('#form_cautare').on('submit', function(e) {
-                //Stop the form from submitting itself to the server.
-                e.preventDefault();
-                var numeutil = $('#user_name').val();
-                $.ajax({
-                    type: "GET",
-                    url: 'user_info.php',
-                    data: {
-                        user_name: numeutil
-                    },
-                    success: function(data) {
-                        $(".info_user").html(data);
+        window.onload = function() {
+            (function() {
+                var httpRequest;
+                var element = document.getElementById("afisareutil");
+                element.addEventListener('click', makeRequest);
+
+                function makeRequest()  {
+                    httpRequest = new XMLHttpRequest();
+
+                    if (!httpRequest) {
+                        alert('Cannot create an XMLHTTP instance');
+                        return false;
                     }
-                });
+                    httpRequest.onreadystatechange = alertContents;
+                    httpRequest.open('GET', 'all_users.php');
+                    httpRequest.send();
+                }
+
+                function alertContents() {
+                    if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                        if (httpRequest.status === 200) {
+                            var div = document.getElementById("username");
+                            div.innerHTML = httpRequest.responseText;
+                        } else {
+                            alert('There was a problem with the request.');
+                        }
+                    }
+                }
+
+            })();
+
+            document.getElementById("Search").addEventListener("click", function(event) {
+                event.preventDefault();
+                submitFormAjax();
             });
-        });
+
+        };
     </script>
+
 
 </head>
 
@@ -58,7 +88,6 @@
             <button class="buton_selected">Info Users</button>
             <button class="buton" onclick="window.location.href='../Admin/pagina_top_users_categorii.php'">Top 10 Users</button>
             <button class="buton" onclick="window.location.href='../Admin/pagina_change_pass.php'">Change password</button>
-            <button class="buton" onclick="window.location.href='../Admin/pagina_messages.html'">Messages</button>
             <button class="buton" onclick="window.location.href='../Login/login.view.php'">Logout</button>
 
         </div>
@@ -67,18 +96,17 @@
 
             <div class="form">
 
-                <form action="pagina_search_info_users.php" method="GET" id="form_cautare">
+                <form action="pagina_info_users.php" method="GET" id="form_cautare">
                     <label for="user_name">UserName: </label>
                     <input type="text" id="user_name" name="user_name">
-                    <input type="submit" value="Search" name="Search" #id="Search">
+                    <input type="submit" value="Search" name="Search" id="Search">
                 </form>
 
-                <button class="afisare_utilizatori">Afisare utilizatori</button>
-
+                <button class="afisare_utilizatori" id="afisareutil">Afisare utilizatori</button>
             </div>
 
-            <div class="info_user"></div>
-            <div class="user_name"></div><br>
+            <div class="info_user" id="infouser"></div>
+            <div class="user_name" id="username"></div><br>
 
 
         </div>

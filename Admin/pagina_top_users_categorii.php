@@ -9,25 +9,36 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('#tipuri').change(function() {
-                console.log("se schimba");
-                var select = $('#tipuri').val();
-                console.log(select);
-                $.ajax({
-                    type: 'GET',
-                    url: 'search_categorii.php',
-                    data: {
-                        tipuri: select
-                    },
-                    success: function(data) {
-                        $(".top_categorii").html(data);
-                    },
-                });
+    <script>       
+        
+        function submitFormAjax() {
+            var pinfo = document.getElementById("topcategorii");
+            let xmlhttp = window.XMLHttpRequest ?
+                new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
 
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200)
+                    pinfo.innerHTML = xmlhttp.responseText;
+                    //console.log(xmlhttp.responseText);
+                }
+
+            let tipuri = document.getElementById('tipuri').value;
+            console.log(tipuri);
+
+            xmlhttp.open("GET", "search_categorii.php?tipuri=" + tipuri, true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send();
+        }
+
+
+        window.onload = function() {
+            document.getElementById("tipuri").addEventListener("change", function(event) {
+                event.preventDefault();
+                submitFormAjax();
             });
-        });
+
+        };
+
     </script>
 
 </head>
@@ -49,7 +60,6 @@
             <button class="buton" onclick="window.location.href='../Admin/pagina_info_users.php'">Info Users</button>
             <button class="buton_selected">Top 10 Users</button>
             <button class="buton" onclick="window.location.href='../Admin/pagina_change_pass.php'">Change password</button>
-            <button class="buton" onclick="window.location.href='../Admin/pagina_messages.html'">Messages</button>
             <button class="buton" onclick="window.location.href='../Login/login.view.php'">Logout</button>
 
         </div>
@@ -59,17 +69,18 @@
             <div class="form">
 
                 <form action="pagina_top_users_categorii.php" method="GET">
-                    <label for="Categorie_joc">Categorie joc: </label>
-                    <select id="tipuri" name="select_tip">
+                    <label for="tipuri">Categorie joc: </label>
+                    <select name="tipuri" id="tipuri">
                         <option value="Strategie">Strategie</option>
                         <option value="Carti">Carti</option>
                         <option value="boardgame">Board game</option>
                     </select>
                 </form>
 
+
             </div><br>
 
-            <div class="top_categorii"></div>
+            <div class="top_categorii" id="topcategorii"></div>
 
 
         </div>
