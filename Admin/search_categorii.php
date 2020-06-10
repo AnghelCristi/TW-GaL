@@ -2,7 +2,7 @@
 
 //if (isset($_GET['select_tip'])) {
 
-    $selectoption = $_GET['tipuri'];
+    $selecttip = $_GET['tipuri'];
 
     //realizam conectiunea cu baza de date
     $conn = mysqli_connect("localhost", "root", "", "tw_gal");
@@ -14,7 +14,7 @@
     }
 
     //interogarea sql
-    $query = "select u.email,j.nume_joc,l.puncte from tabela_jocuri j,tabela_urseri u,tabela_learn l where j.id_joc = l.id_joc and l.id_user = u.id_user and tip_joc = '" . $selectoption . "' ";
+    $query = "select u.email,j.nume_joc,l.puncte from tabela_jocuri j,tabela_urseri u,tabela_learn l where j.id_joc = l.id_joc and l.id_user = u.id_user and tip_joc = '" . $selecttip . "' order by l.puncte desc ";
     $result = mysqli_query($conn, $query);
 
     if ($result->num_rows > 0) {
