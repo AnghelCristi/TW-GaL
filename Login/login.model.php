@@ -106,12 +106,14 @@ function login($data)
             }
         } else {
             http_response_code(401);
+            // header('Location: login.view.php');
             echo '<script>
                     alert("$Wrong password!");
                 </script>';
         }
     } else {
         http_response_code(404);
+        // header('Location: login.view.php');
         echo '<script>
                     alert("Account not found!");
                 </script>';

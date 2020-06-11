@@ -25,7 +25,7 @@
                 </li>
 
                 <li>
-                    <button class="nav-button" onclick="window.location.href='../Test/test.view.php'">
+                    <button class="nav-button" onclick="window.location.href='../Test/index.php'">
                         Test your knowledge
                     </button>
                 </li>
