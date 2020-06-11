@@ -93,7 +93,7 @@ $row= mysqli_fetch_row($rs);
 echo "<form name=myfm method=post action=quiz.php>";
 echo "<table width=100%> <tr> <td width=30>&nbsp;<td> <table border=0>";
 $n=$_SESSION['qn']+1;
-echo "<tR><td><span class=style2>Question ".  $n .": $row[2]</style>";
+echo "<tR><td><span class=style2>Intrebare ".  $n .": $row[2]</style>";
 echo "<tr><td class=style8><input type=radio name=ans value=1>$row[3]";
 echo "<tr><td class=style8> <input type=radio name=ans value=2>$row[4]";
 echo "<tr><td class=style8><input type=radio name=ans value=3>$row[5]";
