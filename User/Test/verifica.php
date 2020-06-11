@@ -40,7 +40,7 @@ $row= mysqli_fetch_row($rs);
 echo "<form name=myfm method=post action=verifica.php>";
 echo "<table width=100%> <tr> <td width=30>&nbsp;<td> <table border=0>";
 $n=$_SESSION['qn']+1;
-echo "<tR><td><span class=style2>Question ".  $n .": $row[2]</style>";
+echo "<tR><td><span class=style2>Intrebare ".  $n .": $row[2]</style>";
 echo "<tr><td class=".($row[7]==1?'tans':'style8').">$row[3]";
 echo "<tr><td class=".($row[7]==2?'tans':'style8').">$row[4]";
 echo "<tr><td class=".($row[7]==3?'tans':'style8').">$row[5]";
